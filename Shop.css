@@ -1,0 +1,407 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background: #f7f7f7;
+}
+
+#header {
+    display: flex;
+    justify-content: space-around;
+    height: 10%;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+}
+
+.header_wrapper {
+    padding: 1.9% 0px;
+    cursor: pointer;
+    min-width: 20%;
+    max-width: 20%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.header_wrapper:hover {
+    color: #d22525;
+    background-color: #FFECE6;
+}
+
+#personalArea {
+    width: 12%;
+    text-align: right;
+    padding: 1.7%;
+    text-align: center;
+    cursor: pointer;
+}
+
+#personalArea:hover {
+    color: #d22525;
+    background-color: #FFECE6;
+}
+
+#personalArea img {
+    display: inline-block;
+}
+
+#main {
+    width: 90%;
+    margin: 1% 2%;
+    color: #70757a;
+    display: flex;
+}
+
+#goodList_section {
+    z-index: 2;
+    height: 80%;
+    width: 100%;
+    max-width: 25%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+#goodList {
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #423720;
+    padding: 5% 15%;
+    cursor: pointer;
+    color: white;
+}
+
+
+#news {
+    width: 85%;
+    margin-left: 11%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 3em;
+    padding: 2%;
+}
+
+#shapka p {
+    padding: 1% 0 0 0;
+}
+
+#goodList span {
+    padding-left: 0.01%;
+    font-size: 1.2em;
+}
+
+section:hover #goodList img {
+    animation-name: goodListOpened;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+#goodList img {
+    animation-name: goodListClosed;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    padding: 5%;
+}
+
+@keyframes goodListOpened {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(90deg);
+    }
+}
+
+@keyframes goodListClosed {
+    from {
+        transform: rotateZ(90deg);
+    }
+    to {
+        transform: rotateZ(0deg);
+    }
+}
+
+#list {
+    animation-name: listClosed;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    box-sizing: border-box;
+    visibility: hidden;
+    margin: 1% 0px 2% 0px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    cursor: pointer;
+    background-color: white;
+    max-height: 80%;
+    word-break: break-word;
+}
+
+section:hover #list {
+    animation-name: listOpened;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes listOpened {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        transform: rotateY(90deg);
+    }
+    to {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes listClosed {
+    from {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+        transform: rotateY(0deg);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: rotateY(90deg);
+    }
+}
+
+.listItem {
+    line-height: 2em;
+    border: 1px solid #f7f7f7;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: white;
+    padding: 5% 10%;
+}
+
+.listItem:hover {
+    color: #d22525;
+    background-color: #FFECE6;
+}
+
+h2 {
+    font-size: 2em;
+    color: red;
+    text-align: center;
+    margin-top: 2%;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    padding: 2% 0%;
+    cursor: pointer;
+    background-color: white;
+}
+
+h3 {
+    font-size: 2em;
+    margin: 2% 0px;
+    text-align: center;
+}
+
+.contacts {
+    text-decoration: underline;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.contacts:first-of-type {
+    color: dodgerblue;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+ul {
+    list-style: disc;
+    margin: 3%;
+    width: border-box;
+}
+
+li {
+    margin: 2% 0px;
+    line-height: 1.5em;
+}
+
+.more {
+    text-align: center;
+    margin: 4% 0px 8% 0px;
+    width: 80%;
+    cursor: pointer;
+}
+
+.more:hover {
+    opacity: 0.8;
+}
+
+.more a {
+    padding: 2% 5%;
+    background-color: #443a25;
+    color: white;
+    border-radius: 6em;
+}
+
+.dropshipping_info_main {
+    width: 40%;
+    display: inline-block;
+    height: 100%;
+    padding: 2.5%;
+}
+
+#dropshipping_info_main {
+    display: flex;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    background-color: white;
+}
+
+#shopDescription {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    padding: 1%;
+    margin: 2% 0px;
+    background-color: white;
+}
+
+#footer {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 93%;
+    height: 100%;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#favourite_wrapper {
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.fromFooter:hover {
+    color: red;
+}
+
+.fromFooter {
+    text-decoration: underline;
+    padding: 0.5em;
+}
+
+.social {
+    position: absolute;
+    top: 1em;
+    margin-left: 2.5%;
+}
+
+#social {
+    margin-left: 1%;
+}
+
+.social:hover {
+    opacity: 0.5;
+    display: inline-block;
+}
+
+#telegram {
+    position: relative;
+}
+
+#shipping_pay {
+    background-color: white;
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+    z-index: 3;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    padding: 3%;
+    margin: 2% 0 0 0;
+}
+
+.shipping_pay_items {
+    margin: 0 0 0 1%;
+}
+
+.deliveryIcons {
+    height: 48px;
+    width: 48px;
+    align-self: center;
+    margin-top: 50%;
+}
+
+#deliveryIcons {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+}
+
+b {
+    font-weight: bold;
+    color: black;
+    padding-bottom: 1%;
+}
+
+#shipping_pay img {
+    margin-right: 3%;
+}
+
+.shipping_pay_items p {
+    padding-top: 1%;
+    display: block;
+}
+
+.search {
+    border: none;
+    background: #f7f7f7;
+    border-radius: 3em;
+    padding: 5%;
+    box-sizing: border-box;
+    width: 90%;
+    display: inline-block;
+}
+
+#search {
+    padding: 1.3%;
+}
+
+#search span {
+    box-sizing: content-box;
+    position: absolute;
+    left: 79%;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    padding: 0.6%;
+    border-radius: 50%;
+    background-color: #423720;
+}
+
+#logo:hover {
+    background-color: transparent;
+}
